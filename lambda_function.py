@@ -41,4 +41,4 @@ def lambda_handler(event, context):
     DESTINATION_API_URL = getenv('DESTINATION_API_URL')
 
     parsed_entries = parse(SOURCE_API_URL, ELEMENTS_PER_PAGE, PARSED_FIELDS)
-    return post_entries(DESTINATION_API_URL, parsed_entries)
+    print(post_entries(DESTINATION_API_URL, parsed_entries))
